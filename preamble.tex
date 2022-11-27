@@ -1,4 +1,4 @@
-\documentclass[12pt,letterpaper, boxed, cm]{article}
+\documentclass[9pt,letterpaper, boxed, cm]{article}
 
 % set 1-inch margins in the document
 \usepackage[margin=1in]{geometry}
@@ -17,7 +17,8 @@
 \usepackage{hyperref}
 \usepackage{multicol}
 \usepackage{mathabx}
-\usepackage{ stmaryrd }
+\usepackage{stmaryrd}
+
 \hypersetup{
     colorlinks=true, %set true if you want colored links
     linktoc=all,     %set to all if you want both sections and subsections linked
@@ -25,8 +26,8 @@
 }
 
 %\usepackage{bbold}
-%\setlist[enumerate]{label=(\alph*)}
-\setlength{\parindent}{0pt}
+\setlist[enumerate]{label=(\alph*)}
+%\setlength{\parindent}{0pt}
 \renewcommand{\baselinestretch}{1.1}
 \usetikzlibrary{graphs,decorations.pathmorphing,decorations.markings}
 
@@ -63,9 +64,13 @@
 \newcommand{\Id}{\operatorname{Id}}
 \newcommand{\Spl}{\operatorname{Spl}}
 \renewcommand{\O}{\mathcal{O}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\TI}{\operatorname{Ten}}
 
 \theoremstyle{definition}
-\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{prop}[theorem]{Proposition}
 \newtheorem{definition}[theorem]{Definition}
@@ -74,5 +79,6 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{exercise}[theorem]{Exercise}
 \newtheorem*{theorem*}{Theorem}
+
 % include this if you want to import graphics files with /includegraphics
 \usepackage{graphicx}
