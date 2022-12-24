@@ -17,7 +17,8 @@
 \usepackage{multicol}
 %\usepackage{mathabx}
 \usepackage{stmaryrd}
-
+\usepackage{float}
+\usepackage{adjustbox}
 \hypersetup{
     colorlinks=true, %set true if you want colored links
     linktoc=all,     %set to all if you want both sections and subsections linked
@@ -28,7 +29,10 @@
 \setlist[enumerate]{label=(\alph*)}
 %\setlength{\parindent}{0pt}
 \renewcommand{\baselinestretch}{1.15}
+% \renewcommand{\qedsymbol}{$\blacksquare$}
 \usetikzlibrary{graphs,decorations.pathmorphing,decorations.markings}
+\tikzcdset{scale cd/.style={every label/.append style={scale=#1},
+    cells={nodes={scale=#1}}}}
 
 % add other custom commands here
 \newcommand{\Z}{\mathbb{Z}}
@@ -51,7 +55,6 @@
 \newcommand{\Ob}{\operatorname{Ob}}
 \newcommand{\Mor}{\operatorname{Mor}}
 \newcommand{\Mat}{\operatorname{Mat}}
-\newcommand{\iden}{\operatorname{id}}
 \newcommand{\End}{\operatorname{End}}
 \newcommand{\op}{^{\operatorname{op}}}
 \newcommand{\Res}{\operatorname{Res}}
@@ -66,7 +69,8 @@
 \newcommand{\im}{\operatorname{im}}
 \newcommand{\D}{\mathcal{D}}
 \newcommand{\rank}{\operatorname{rank}}
-\newcommand{\TI}{\operatorname{Ten}}
+\newcommand{\Ten}{\operatorname{Ten}}
+\newcommand{\stab}{\operatorname{stab}}
 
 \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
@@ -78,6 +82,5 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{exercise}[theorem]{Exercise}
 \newtheorem*{theorem*}{Theorem}
-
 % include this if you want to import graphics files with /includegraphics
 \usepackage{graphicx}
