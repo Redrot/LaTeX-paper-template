@@ -1,4 +1,4 @@
-\documentclass[10pt,letterpaper, boxed, cm]{article}
+\documentclass[11pt,letterpaper, boxed, cm]{article}
 
 % set 1-inch margins in the document
 \usepackage[margin=1in]{geometry}
@@ -19,6 +19,9 @@
 \usepackage{stmaryrd}
 \usepackage{float}
 \usepackage{adjustbox}
+\usepackage{tikz}
+\usetikzlibrary{matrix, calc, arrows}
+
 \hypersetup{
     colorlinks=true, %set true if you want colored links
     linktoc=all,     %set to all if you want both sections and subsections linked
@@ -28,7 +31,7 @@
 %\usepackage{bbold}
 \setlist[enumerate]{label=(\alph*)}
 %\setlength{\parindent}{0pt}
-\renewcommand{\baselinestretch}{1.15}
+\renewcommand{\baselinestretch}{1}
 % \renewcommand{\qedsymbol}{$\blacksquare$}
 \usetikzlibrary{graphs,decorations.pathmorphing,decorations.markings}
 \tikzcdset{scale cd/.style={every label/.append style={scale=#1},
@@ -43,14 +46,10 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\RP}{\mathbb{RP}}
 \newcommand{\CP}{\mathbb{CP}}
-\newcommand{\Hom}{\text{Hom}}
-\newcommand{\Aut}{\text{Aut}}
-\newcommand{\Div}{\text{div}}
-\newcommand{\bigO}{\mathcal{O}}
-\newcommand{\disc}{\text{disc}}
-\newcommand{\Tr}{\text{Tr}}
-\newcommand{\rk}{\text{rk}}
-\newcommand{\sphere}{\mathbb{S}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\rk}{\operatorname{rk}}
 \newcommand{\inv}{^{-1}}
 \newcommand{\Ob}{\operatorname{Ob}}
 \newcommand{\Mor}{\operatorname{Mor}}
@@ -64,23 +63,58 @@
 \newcommand{\Iso}{\operatorname{Iso}}
 \newcommand{\id}{\operatorname{id}}
 \newcommand{\Id}{\operatorname{Id}}
-\newcommand{\Spl}{\operatorname{Spl}}
-\renewcommand{\O}{\mathcal{O}}
 \newcommand{\im}{\operatorname{im}}
-\newcommand{\D}{\mathcal{D}}
 \newcommand{\rank}{\operatorname{rank}}
-\newcommand{\Ten}{\operatorname{Ten}}
+\newcommand{\TI}{\operatorname{ten}}
 \newcommand{\stab}{\operatorname{stab}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calD}{\mathcal{D}}
+\newcommand{\calE}{\mathcal{E}}
+\newcommand{\calF}{\mathcal{F}}
+\newcommand{\calG}{\mathcal{G}}
+\newcommand{\calH}{\mathcal{H}}
+\newcommand{\calI}{\mathcal{I}}
+\newcommand{\calJ}{\mathcal{J}}
+\newcommand{\calK}{\mathcal{K}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calN}{\mathcal{N}}
+\newcommand{\calO}{\mathcal{O}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calQ}{\mathcal{Q}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calS}{\mathcal{S}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\calU}{\mathcal{U}}
+\newcommand{\calV}{\mathcal{V}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\calX}{\mathcal{X}}
+\newcommand{\calY}{\mathcal{Y}}
+\newcommand{\calZ}{\mathcal{Z}}
 
-\theoremstyle{definition}
+\newcommand{\Syl}{\operatorname{Syl}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\triv}{\mathbf{triv}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\catmod}{\mathbf{mod}}
+
+% \theoremstyle{definition}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{prop}[theorem]{Proposition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{example}[theorem]{Example}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{exercise}[theorem]{Exercise}
 \newtheorem*{theorem*}{Theorem}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
 % include this if you want to import graphics files with /includegraphics
-\usepackage{graphicx}
